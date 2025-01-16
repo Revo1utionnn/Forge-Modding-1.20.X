@@ -2,5 +2,12 @@
   "item.revo1utiontest.titanite": "Titanite",
   "item.revo1utiontest.raw_titanite": "Raw Titanite",
 
-  "block.revo1utiontest.titanite_block": "Block of Titanite"
+  "block.revo1utiontest.titanite_block": "Block of Titanite",
+  "block.revo1utiontest.raw_titanite_block": "Block of Raw Titanite",
+  "block.revo1utiontest.titanite_ore": "Titanite Ore",
+  "block.revo1utiontest.deepslate_titanite_ore": "Deepslate Titanite Ore",
+  "block.revo1utiontest.nether_titanite_ore": "Nether Titanite Ore",
+  "block.revo1utiontest.end_stone_titanite_ore": "End Titanite Ore",
+
+  "creativetab.testing_tab": "Testing Tab"
 }

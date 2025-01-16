@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.revo1ution.revo1utiontest.block.ModBlocks;
+import net.revo1ution.revo1utiontest.item.ModCreativeTabs;
 import net.revo1ution.revo1utiontest.item.ModItems;
 import org.slf4j.Logger;
 
@@ -26,7 +27,10 @@ public class Revo1utionTest {
     public Revo1utionTest() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -46,6 +50,11 @@ public class Revo1utionTest {
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.TITANITE_BLOCK);
+            event.accept(ModBlocks.RAW_TITANITE_BLOCK);
+            event.accept(ModBlocks.TITANITE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_TITANITE_ORE);
+            event.accept(ModBlocks.NETHER_TITANITE_ORE);
+            event.accept(ModBlocks.END_STONE_TITANITE_ORE);
         }
     }
 
