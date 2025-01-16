@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.revo1ution.revo1utiontest.block.ModBlocks;
 import net.revo1ution.revo1utiontest.item.ModItems;
 import org.slf4j.Logger;
 
@@ -41,6 +42,10 @@ public class Revo1utionTest {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TITANITE);
             event.accept(ModItems.RAW_TITANITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.TITANITE_BLOCK);
         }
     }
 

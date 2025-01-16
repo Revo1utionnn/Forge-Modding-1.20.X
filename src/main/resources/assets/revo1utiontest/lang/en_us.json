@@ -1,4 +1,6 @@
 {
   "item.revo1utiontest.titanite": "Titanite",
-  "item.revo1utiontest.raw_titanite": "Raw Titanite"
+  "item.revo1utiontest.raw_titanite": "Raw Titanite",
+
+  "block.revo1utiontest.titanite_block": "Block of Titanite"
 }
