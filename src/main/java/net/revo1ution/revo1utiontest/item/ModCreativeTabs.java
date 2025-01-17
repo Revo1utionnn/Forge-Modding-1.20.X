@@ -21,6 +21,9 @@ public class ModCreativeTabs {
                     .displayItems((displayParameters, output) -> {
                         output.accept(ModItems.TITANITE.get());
                         output.accept(ModItems.RAW_TITANITE.get());
+                        output.accept(ModItems.TITANITE_SWORD.get());
+                        output.accept(ModItems.TITANITE_PICKAXE.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
 
                         output.accept(ModBlocks.TITANITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_TITANITE_ORE.get());
@@ -28,6 +31,8 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.END_STONE_TITANITE_ORE.get());
                         output.accept(ModBlocks.RAW_TITANITE_BLOCK.get());
                         output.accept(ModBlocks.TITANITE_BLOCK.get());
+
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
                     }).build());
 
 

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "revo1utiontest:raw_titanite_block"
+    }
+  ],
+  "result": {
+    "item": "revo1utiontest:raw_titanite",
+    "count": 9
+  }
+}

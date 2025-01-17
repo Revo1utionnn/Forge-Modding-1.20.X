@@ -47,6 +47,13 @@ public class Revo1utionTest {
             event.accept(ModItems.TITANITE);
             event.accept(ModItems.RAW_TITANITE);
         }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.TITANITE_PICKAXE);
+            event.accept(ModItems.METAL_DETECTOR);
+        }
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.TITANITE_SWORD);
+        }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.TITANITE_BLOCK);

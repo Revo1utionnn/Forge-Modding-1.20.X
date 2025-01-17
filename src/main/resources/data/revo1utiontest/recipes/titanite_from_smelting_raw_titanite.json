@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "titanite",
+  "ingredient": {
+    "item": "revo1utiontest:raw_titanite"
+  },
+  "result": "revo1utiontest:titanite"
+}

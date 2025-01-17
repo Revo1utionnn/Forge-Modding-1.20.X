@@ -1,6 +1,10 @@
 package net.revo1ution.revo1utiontest.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.revo1ution.revo1utiontest.Revo1utionTest;
+import net.revo1ution.revo1utiontest.block.custom.SoundBlock;
 import net.revo1ution.revo1utiontest.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -26,18 +30,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_TITANITE_BLOCK = registerBlock("raw_titanite_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> TITANITE_ORE = registerBlock("titanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.STONE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().
+                    strength(3.0F, 6.0F), UniformInt.of(3, 6)));
     public static final RegistryObject<Block> DEEPSLATE_TITANITE_ORE = registerBlock("deepslate_titanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.DEEPSLATE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).requiresCorrectToolForDrops().
+                    strength(3.0F, 6.0F), UniformInt.of(3, 8)));
     public static final RegistryObject<Block> NETHER_TITANITE_ORE = registerBlock("nether_titanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.NETHER).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.NETHERRACK)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).requiresCorrectToolForDrops().
+                    strength(3.0F, 6.0F), UniformInt.of(3, 7)));
     public static final RegistryObject<Block> END_STONE_TITANITE_ORE = registerBlock("end_stone_titanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.STONE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).requiresCorrectToolForDrops().
+                    strength(3.0F, 6.0F), UniformInt.of(4, 8)));
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
 
