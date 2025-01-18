@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures":{
+    "layer0": "revo1utiontest:item/chicken_platter"
+  }
+}
