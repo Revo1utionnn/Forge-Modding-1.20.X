@@ -25,6 +25,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.TITANITE_PICKAXE.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModItems.CHICKEN_PLATTER.get());
+                        output.accept(ModItems.WISP.get());
 
                         output.accept(ModBlocks.TITANITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_TITANITE_ORE.get());

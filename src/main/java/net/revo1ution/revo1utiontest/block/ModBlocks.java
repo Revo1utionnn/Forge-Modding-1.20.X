@@ -1,15 +1,12 @@
 package net.revo1ution.revo1utiontest.block;
 
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.revo1ution.revo1utiontest.Revo1utionTest;
 import net.revo1ution.revo1utiontest.block.custom.SoundBlock;
 import net.revo1ution.revo1utiontest.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -46,6 +43,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> TITANITE_STAIRS = registerBlock("titanite_stairs",
+            () -> new StairBlock(() -> ModBlocks.TITANITE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS).sound(SoundType.COPPER)));
+    public static final RegistryObject<Block> TITANITE_SLAB = registerBlock("titanite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB).sound(SoundType.COPPER)));
+    public static final RegistryObject<Block> TITANITE_WALL = registerBlock("titanite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_WALL).sound(SoundType.COPPER)));
 
 
 

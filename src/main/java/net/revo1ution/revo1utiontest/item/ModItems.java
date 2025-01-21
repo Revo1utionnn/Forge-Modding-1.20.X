@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.revo1ution.revo1utiontest.Revo1utionTest;
+import net.revo1ution.revo1utiontest.item.custom.FuelItem;
 import net.revo1ution.revo1utiontest.item.custom.MetalDetectorItem;
 
 public class ModItems {
@@ -27,6 +28,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHICKEN_PLATTER = ITEMS.register("chicken_platter",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CHICKEN_PLATTER)));
+
+    public static final RegistryObject<Item> WISP = ITEMS.register("wisp",
+            () -> new FuelItem(new Item.Properties().fireResistant(), 3200));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

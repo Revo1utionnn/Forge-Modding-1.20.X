@@ -1,20 +1,32 @@
 {
   "item.revo1utiontest.titanite": "Titanite",
   "item.revo1utiontest.raw_titanite": "Raw Titanite",
+
   "item.revo1utiontest.titanite_sword": "Titanite Sword",
   "item.revo1utiontest.titanite_pickaxe": "Titanite Pickaxe",
+
   "item.revo1utiontest.metal_detector": "Metal Detector",
   "item.revo1utiontest.chicken_platter": "Chicken Platter",
+  "item.revo1utiontest.wisp": "Wisp",
 
   "block.revo1utiontest.titanite_block": "Block of Titanite",
   "block.revo1utiontest.raw_titanite_block": "Block of Raw Titanite",
+
   "block.revo1utiontest.titanite_ore": "Titanite Ore",
   "block.revo1utiontest.deepslate_titanite_ore": "Deepslate Titanite Ore",
   "block.revo1utiontest.nether_titanite_ore": "Nether Titanite Ore",
   "block.revo1utiontest.end_stone_titanite_ore": "End Titanite Ore",
+
+  "block.revo1utiontest.titanite_stairs": "Titanite Stairs",
+  "block.revo1utiontest.titanite_slab": "Titanite Slab",
+
   "block.revo1utiontest.sound_block": "Sound Block",
 
   "creativetab.testing_tab": "Testing Tab",
 
-  "item.revo1utiontest.metal_detector.no_valuables": "No Valuables Found"
+  "item.revo1utiontest.metal_detector.no_valuables": "No Valuables Found",
+
+  "tooltip.revo1utiontest.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables!",
+  "tooltip.revo1utiontest.metal_detector.tooltip": "Press §eSHIFT§r for more Information",
+  "tooltip.revo1utiontest.sound_block": "Plays nice sounds when walking or right-clicking."
 }
