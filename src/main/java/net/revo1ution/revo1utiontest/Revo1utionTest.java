@@ -3,7 +3,6 @@ package net.revo1ution.revo1utiontest;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -14,7 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.revo1ution.revo1utiontest.block.ModBlocks;
-import net.revo1ution.revo1utiontest.item.ModCreativeTabs;
+import net.revo1ution.revo1utiontest.item.ModCreativeModeTabs;
 import net.revo1ution.revo1utiontest.item.ModItems;
 import org.slf4j.Logger;
 
@@ -27,7 +26,7 @@ public class Revo1utionTest {
     public Revo1utionTest() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeTabs.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

@@ -19,6 +19,23 @@
 
   "block.revo1utiontest.titanite_stairs": "Titanite Stairs",
   "block.revo1utiontest.titanite_slab": "Titanite Slab",
+  "block.revo1utiontest.titanite_Wall": "Titanite Wall",
+  "block.revo1utiontest.titanite_pressure_plate": "Titanite Pressure Plate",
+  "block.revo1utiontest.titanite_button": "Titanite Button",
+  "block.revo1utiontest.titanite_fence": "Titanite Fence",
+  "block.revo1utiontest.titanite_fence_gate": "Titanite Fence Gate",
+  "block.revo1utiontest.titanite_door": "Titanite Door",
+  "block.revo1utiontest.titanite_trapdoor": "Titanite Trap Door",
+
+  "block.revo1utiontest.raw_titanite_stairs": "Raw Titanite Stairs",
+  "block.revo1utiontest.raw_titanite_slab": "Raw Titanite Slab",
+  "block.revo1utiontest.raw_titanite_Wall": "Raw Titanite Wall",
+  "block.revo1utiontest.raw_titanite_pressure_plate": "Raw Titanite Pressure Plate",
+  "block.revo1utiontest.raw_titanite_button": "Raw Titanite Button",
+  "block.revo1utiontest.raw_titanite_fence": "Raw Titanite Fence",
+  "block.revo1utiontest.raw_titanite_fence_gate": "Raw Titanite Fence Gate",
+  "block.revo1utiontest.raw_titanite_door": "Raw Titanite Door",
+  "block.revo1utiontest.raw_titanite_trapdoor": "Raw Titanite Trap Door",
 
   "block.revo1utiontest.sound_block": "Sound Block",
 

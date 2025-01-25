@@ -65,33 +65,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 "revo1utiontest:raw_titanite", "titanite", "revo1utiontest:raw_titanite_block", null);
         oreSmelting(pWriter, TITANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANITE.get(), 0.25f, 200, "titanite");
         oreBlasting(pWriter, TITANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TITANITE.get(), 0.25f, 200, "titanite");
-        stairBuilder(ModBlocks.TITANITE_STAIRS.get(), Ingredient.of(ModBlocks.TITANITE_BLOCK.get())).save(pWriter);
-        slabBuilder(ModBlocks.TITANITE_SLAB.get(), Ingredient.of(ModBlocks.TITANITE_BLOCK.get())).save(pWriter);
-        wallBuilder(ModBlocks.TITANITE_WALL.get(), Ingredient.of(ModBlocks.TITANITE_BLOCK.get())).save(pWriter);
+
+        stairBuilder(ModBlocks.TITANITE_STAIRS.get(), Ingredient.of(ModItems.TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.TITANITE.get()), has(ModItems.TITANITE.get())).save(pWriter);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TITANITE_SLAB.get(), ModItems.TITANITE.get());
+        buttonBuilder(ModBlocks.TITANITE_BUTTON.get(), Ingredient.of(ModItems.TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.TITANITE.get()), has(ModItems.TITANITE.get())).save(pWriter);
+        pressurePlate(pWriter, ModBlocks.TITANITE_PRESSURE_PLATE.get(), ModItems.TITANITE.get());
+        fenceBuilder(ModBlocks.TITANITE_FENCE.get(), Ingredient.of(ModItems.TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.TITANITE.get()), has(ModItems.TITANITE.get())).save(pWriter);
+        fenceGateBuilder(ModBlocks.TITANITE_FENCE_GATE.get(), Ingredient.of(ModItems.TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.TITANITE.get()), has(ModItems.TITANITE.get())).save(pWriter);
+        wall(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TITANITE_WALL.get(), ModItems.TITANITE.get());
+        doorBuilder(ModBlocks.TITANITE_DOOR.get(), Ingredient.of(ModItems.TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.TITANITE.get()), has(ModItems.TITANITE.get())).save(pWriter);
+        trapdoorBuilder(ModBlocks.TITANITE_TRAPDOOR.get(), Ingredient.of(ModItems.TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.TITANITE.get()), has(ModItems.TITANITE.get())).save(pWriter);
+
+        stairBuilder(ModBlocks.RAW_TITANITE_STAIRS.get(), Ingredient.of(ModItems.RAW_TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.RAW_TITANITE.get()), has(ModItems.RAW_TITANITE.get())).save(pWriter);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_TITANITE_SLAB.get(), ModItems.RAW_TITANITE.get());
+        buttonBuilder(ModBlocks.RAW_TITANITE_BUTTON.get(), Ingredient.of(ModItems.RAW_TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.RAW_TITANITE.get()), has(ModItems.RAW_TITANITE.get())).save(pWriter);
+        pressurePlate(pWriter, ModBlocks.RAW_TITANITE_PRESSURE_PLATE.get(), ModItems.RAW_TITANITE.get());
+        fenceBuilder(ModBlocks.RAW_TITANITE_FENCE.get(), Ingredient.of(ModItems.RAW_TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.RAW_TITANITE.get()), has(ModItems.RAW_TITANITE.get())).save(pWriter);
+        fenceGateBuilder(ModBlocks.RAW_TITANITE_FENCE_GATE.get(), Ingredient.of(ModItems.RAW_TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.RAW_TITANITE.get()), has(ModItems.RAW_TITANITE.get())).save(pWriter);
+        wall(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_TITANITE_WALL.get(), ModItems.RAW_TITANITE.get());
+        doorBuilder(ModBlocks.RAW_TITANITE_DOOR.get(), Ingredient.of(ModItems.RAW_TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.RAW_TITANITE.get()), has(ModItems.RAW_TITANITE.get())).save(pWriter);
+        trapdoorBuilder(ModBlocks.RAW_TITANITE_TRAPDOOR.get(), Ingredient.of(ModItems.RAW_TITANITE.get())).group("titanite")
+                .unlockedBy(getHasName(ModItems.RAW_TITANITE.get()), has(ModItems.RAW_TITANITE.get())).save(pWriter);
+
     }
-
-    protected static RecipeBuilder stairBuilder(ItemLike pStairs, Ingredient pMaterial) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pStairs, 4)
-                .define('#', pMaterial)
-                .pattern("#  ")
-                .pattern("## ")
-                .pattern("###");
-    }
-
-    protected static RecipeBuilder slabBuilder(ItemLike pSlab, Ingredient pMaterial) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pSlab, 6)
-                .define('#', pMaterial)
-                .pattern("###");
-    }
-
-    protected static RecipeBuilder wallBuilder(ItemLike pWall, Ingredient pMaterial) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pWall, 6)
-                .define('#', pMaterial)
-                .pattern("###")
-                .pattern("###");
-    }
-
-
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,
@@ -104,7 +111,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
-    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
+    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer,
+                                     List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime,
+                                     String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime,
                     pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))

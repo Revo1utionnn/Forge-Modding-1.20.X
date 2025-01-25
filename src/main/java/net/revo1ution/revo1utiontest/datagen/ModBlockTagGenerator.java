@@ -46,7 +46,27 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RAW_TITANITE_BLOCK.get(),
                         ModBlocks.TITANITE_SLAB.get(),
                         ModBlocks.TITANITE_STAIRS.get(),
-                        ModBlocks.TITANITE_WALL.get());
+                        ModBlocks.TITANITE_WALL.get(),
+                        ModBlocks.RAW_TITANITE_SLAB.get(),
+                        ModBlocks.RAW_TITANITE_STAIRS.get(),
+                        ModBlocks.RAW_TITANITE_WALL.get(),
+                        ModBlocks.TITANITE_PRESSURE_PLATE.get(),
+                        ModBlocks.TITANITE_BUTTON.get(),
+                        ModBlocks.TITANITE_DOOR.get(),
+                        ModBlocks.TITANITE_TRAPDOOR.get(),
+                        ModBlocks.RAW_TITANITE_PRESSURE_PLATE.get(),
+                        ModBlocks.RAW_TITANITE_BUTTON.get(),
+                        ModBlocks.RAW_TITANITE_DOOR.get(),
+                        ModBlocks.RAW_TITANITE_TRAPDOOR.get());
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.TITANITE_FENCE.get())
+                .add(ModBlocks.RAW_TITANITE_FENCE.get());
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.TITANITE_WALL.get())
+                .add(ModBlocks.RAW_TITANITE_WALL.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.TITANITE_FENCE_GATE.get())
+                .add(ModBlocks.RAW_TITANITE_FENCE_GATE.get());
     }
 
     @Override
